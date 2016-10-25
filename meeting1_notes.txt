@@ -1,0 +1,74 @@
+single quotes and double quotes are interchangeable
+run a .py file with python example.py
+no type declarations
+types are not static (you can change them)
+dictionaries: like hashtables (key, value) pairs
+lists have dynamic size, can hold many types of objects
+slicing lists is easy --to get the elements from a (inclusive) to b (exclusive) you do mylist[a:b]
+mylist[-1] gives you the last element
+mylist.append(x) appends x on the end of mylist
+for loops are done like for each loops in java
+for elt in my_list:
+    #do stuff in elt
+for i in xrange(len(my_list)):
+    do stuff with the index
+len() gives you the length of anything that has a length
+The difference between range and xrange is that range creates an actual list in memory, whereas xrange is just iterable 
+    you can call range(4) or xrange(4). xrange(4) creates an iterable with the values 0, 1, 2, 3. range(4) creates a 
+    list of values [0, 1, 2, 3]. You can't treat xrange like a list but you can index into it ???
+You can iterate over keys or over keys and values in dictionaries
+for key in my_dict:
+    #stuff
+for key, val in my_dict.iteritems()
+    #stuff
+functions are defined with
+    def crash(x, y):
+        s = '{0} totally smashed into {1}'.format(car, other_car)
+        return s
+then called with
+    crash('Lambo', 'BMW')
+the formatted print can reuse values. s = '{0}{0}'.format("pigs") sets s equal to "pigspigs"
+http://www.learnpython.org
+https://wiki.python.org/moin/BeginnersGuide
+
+class attributes: you can have attributes accessible to the entire class (Class.atr), or for just one instance (instance.attr)
+class variables definited outside __init__ are shared among every instance of the class (?)
+
+None is null
+
+inheritance:
+class People(object):
+class Employee(People):
+sets up Employee to inherit from People
+constructor is __init__
+super(Sharknado, self).__init__(windspeed) calls the initializer of the superclass of Sharknado with the parameter windspeed.
+calling a regular method would be like super(Sharknado, self).get_report()
+
+#creates list [0, end)
+range(end)
+#creates list [start, end)
+range(start, end)
+#if step = n, creates list with every nth number
+range(start, end, step)
+
+xrange is usually better because it doesn't generate a list, which saves space
+
+list comprehensions--returns new list, never modifies old one
+nums = xrange(5)
+squared_nums = [x ** 2 for x in nums]
+
+print squared_nums
+#[0, 1, 4, 9, 16]
+
+nums = xrange(10)
+odds_sq = [x ** 2 for x in nums if x % 2 == 1]
+print odds_sq
+#[1, 9, 25, 49, 81]
+
+""" also gives a comment. used for documentation at the top of functions and such
+
+regex: + means 1 or more copies of this (ex [a-z]+)
+to get a specific number of repeats, you do [a-z]{14}
+\d means digit
+[A-Za-z] means anything from a to z or A-Z
+
