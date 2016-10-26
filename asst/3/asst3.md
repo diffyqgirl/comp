@@ -157,7 +157,7 @@ class Article(Content):
 
 
 class Contributor(models.Model):
-    pass
+    pass 
 
 ```
 

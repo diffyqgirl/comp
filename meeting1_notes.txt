@@ -71,4 +71,13 @@ regex: + means 1 or more copies of this (ex [a-z]+)
 to get a specific number of repeats, you do [a-z]{14}
 \d means digit
 [A-Za-z] means anything from a to z or A-Z
+^ is start of expression, $ is end
+
+{{}} inserts Django into html
+{% is Django for flow of control logic (loops, if/else, etc)
+you can make a template and define blocks in that template. then pages that 
+extend (inherit) it can substitute what they want in for that block
+
+underscore in python style means that it's stylistically private (not possible 
+to actually make anything private)
 

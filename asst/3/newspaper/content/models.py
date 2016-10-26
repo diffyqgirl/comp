@@ -14,10 +14,11 @@ class Content(models.Model):
 
 class Article(Content):
     text = models.TextField()
-    show = text.formfield()
+    def show(): self.text
 
 
 
 class Contributor(models.Model):
     first_name = models.CharField(max_length = 100)
     last_name = models.CharField(max_length = 100)
+    def die(): Model.delete(using=DEFAULT_DB_ALIAS, keep_parents = False)
